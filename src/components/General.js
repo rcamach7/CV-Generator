@@ -28,7 +28,7 @@ class General extends React.Component {
         }
     }
     // This will invoke our parent function, and pass UP values of our current state the user requested to save.
-    submitNewName = (e) => {
+    submitFields = (e) => {
         e.preventDefault();
         this.props.handleGeneralChange(this.state.name, this.state.email, this.state.phone);
     }
@@ -36,7 +36,7 @@ class General extends React.Component {
     render() {
         return(
             <div className="General">
-                <form onSubmit={this.submitNewName}>
+                <form onSubmit={this.submitFields}>
                     {/* onChange will update state on ANY character change in the form value, ensuring that once 'save' is clicked, the state values reflect what the user has entered.*/}
                     <label htmlFor="nameInput">Enter Name: </label>
                     <input type="text" id="nameInput" onChange={this.onChangeVal}/><br/>
