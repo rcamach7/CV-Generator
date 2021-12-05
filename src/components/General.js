@@ -1,5 +1,5 @@
 import React from "react";
-import "./styling/CVSection.css";
+import "./styling/sectionStyling.css";
 
 class General extends React.Component {
     constructor(props) {
@@ -35,7 +35,7 @@ class General extends React.Component {
 
     render() {
         return(
-            <div className="CVSection">
+            <div className="General">
                 <form onSubmit={this.submitNewName}>
                     {/* onChange will update state on ANY character change in the form value, ensuring that once 'save' is clicked, the state values reflect what the user has entered.*/}
                     <label htmlFor="nameInput">Enter Name: </label>

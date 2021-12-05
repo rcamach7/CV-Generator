@@ -2,6 +2,7 @@ import React from "react";
 import "./styling/App.css";
 import CVHeader from "./CVHeader";
 import General from "./General";
+import Education from "./Education";
 import CVDisplay from "./CVDisplay";
 
 class App extends React.Component {
@@ -20,6 +21,7 @@ class App extends React.Component {
             companyResponsibilities: "-",
         }
         this.handleGeneralChange = this.handleGeneralChange.bind(this);
+        this.handleEducationChange = this.handleEducationChange.bind(this);
     }
     // This function is passed down to its child, general. It will be triggered when user saves changes to its state properties, which in turn updates our state values.
     handleGeneralChange(name, email, phone) {
@@ -27,6 +29,14 @@ class App extends React.Component {
             name: name,
             email: email,
             phone: phone,
+        })
+    }
+
+    handleEducationChange(schoolName, titleStudy, dateStudy) {
+        this.setState({
+            schoolName: schoolName,
+            titleStudy: titleStudy,
+            dateStudy: dateStudy,
         })
     }
 
@@ -44,6 +54,9 @@ class App extends React.Component {
                     <General handleGeneralChange = {this.handleGeneralChange} name = {name} email = {email} phone = {phone}>
                     </General>
 
+                    {/*This component will send us any saved education info via a function call*/}
+                    <Education handleEducationChange = {this.handleEducationChange} schoolName = {schoolName} titleStudy = {titleStudy} dateStudy = {dateStudy}>
+                    </Education>
                     {/*Here we pass on the state to be displayed. Anytime our state variables are updated, React will take care of displaying those changes*/}
                     <CVDisplay name={name} email = {email} phone = {phone}
                         schoolName = {schoolName} titleStudy = {titleStudy} dateStudy = {dateStudy} companyName = {companyName}
