@@ -1,0 +1,7 @@
+.CVDisplay {
+    width: 600px;
+    height: 600px;
+
+    text-align: center;
+    border: solid black 2px;
+}
