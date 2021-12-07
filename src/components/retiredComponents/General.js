@@ -1,5 +1,4 @@
 import React from "react";
-import "./styling/sectionStyling.css";
 
 class General extends React.Component {
     constructor(props) {
@@ -38,14 +37,14 @@ class General extends React.Component {
             <div className="General">
                 <form onSubmit={this.submitFields}>
                     {/* onChange will update state on ANY character change in the form value, ensuring that once 'save' is clicked, the state values reflect what the user has entered.*/}
-                    <label htmlFor="nameInput">Enter Name: </label>
+                    <label htmlFor="nameInput">Enter Name: </label><br/>
                     <input type="text" id="nameInput" onChange={this.onChangeVal}/><br/>
 
-                    <label htmlFor="emailInput">Enter Email: </label>
+                    <label htmlFor="emailInput">Enter Email: </label><br/>
                     <input type="text" id="emailInput" onChange={this.onChangeVal}/><br/>
 
-                    <label htmlFor="phoneInput">Enter Phone: </label>
-                    <input type="text" id="phoneInput" onChange={this.onChangeVal}/><br/><br/>
+                    <label htmlFor="phoneInput">Enter Phone: </label><br/>
+                    <input type="text" id="phoneInput" onChange={this.onChangeVal}/><br/>
 
                     <button type="submit">Save</button>
                 </form>

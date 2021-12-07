@@ -2,6 +2,9 @@
     width: 600px;
     height: 600px;
 
-    text-align: center;
-    border: solid black 2px;
+    padding-left: 10px;
+}
+
+.CVDisplay h3 {
+    padding-bottom: 16px;
 }
